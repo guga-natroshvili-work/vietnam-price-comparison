@@ -51,3 +51,31 @@ VPC generates an Excel file containing price comparisons between **Rustar Online
 ## **Troubleshooting**
 - If the app does **not run**, make sure **ODBC drivers** are installed.  
 - If SQL connection fails, check **firewall settings** or **database credentials**.
+
+
+---
+
+## **Development Files**
+These files were used during the initial stages of development and are still relevant for ongoing processes, such as matching new hotels and categories. While some functionalities have been integrated into the SQL stored procedure, the matching logic remains a crucial part of the workflow for adding new data.
+
+### `data_io.py`
+Handles reading and exporting data between Excel files. It includes functions to:
+- **Import data** from Excel sheets into pandas DataFrames (`enter_data`).
+- **Export the processed data** back to an Excel file (`export_data`).
+
+### `match_hotels.py`
+Uses **RapidFuzz** for fuzzy matching to match hotel names between datasets. The script processes hotel names from the Rustar dataset (`ro_df`) and compares them against competitor hotels from the Competators dataset (`summary`). It merges the matched data and exports it to an Excel file.
+
+### `match_categories.py`
+Fuzzy matches room categories between the Rustar (`ro_df`) and Competators(`samo_df`) datasets using **RapidFuzz**. It processes room categories, removes text inside parentheses, and matches the stripped categories. It also includes an additional function to match the text inside parentheses for more granular comparison. The results are saved to an Excel file.
+
+### Required Python Packages for Matching
+- **Pandas**: 2.2.3 ([More Info](https://pypi.org/project/pandas/))
+- **Rapidfuzz**: 3.12.2 ([More Info](https://pypi.org/project/RapidFuzz/))
+- **openpyxl**: 3.1.5 ([More Info](https://pypi.org/project/openpyxl/))
+
+```bash
+pip install pandas==2.2.3, rapidfuzz==3.12.2, openpyxl==3.1.5
+```
+
+These files remain essential for matching new hotels and categories and uploading the results to SQL for further processing.
