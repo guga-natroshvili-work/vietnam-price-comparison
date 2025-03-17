@@ -1,5 +1,6 @@
-# VPC (Vietnam Price Comparison)
 ![VPC LOGO](/Logo.ico "VPC Logo")
+# VPC (Vietnam Price Comparison)
+A Python-based tool for generating price comparison reports between Rustar Online Tourism (DrMsql) and its competitors, Amega Travel, Crystal Tourism, Victoria Tour, and Rustar DMC Vietnam. The app matches hotel and category data, processes pricing information, and generates an Excel report highlighting price differences.
 
 ## Functionality  
 VPC generates an Excel file containing price comparisons between **Rustar Online Tourism (DrMsql)** and its competitors: **Amega Travel, Crystal Tourism, Victoria Tour, and Rustar DMC Vietnam**.  
@@ -56,6 +57,12 @@ VPC generates an Excel file containing price comparisons between **Rustar Online
 ---
 
 ## **Development Files**
+![Python](https://img.shields.io/badge/Python-3.13-green.svg)
+![Pandas](https://img.shields.io/badge/Pandas-2.2.3-white.svg)
+![RapidFuzz](https://img.shields.io/badge/RapidFuzz-3.12.2-blue.svg)
+![OpenPyXl](https://img.shields.io/badge/OpenPyXl-3.1.5-darkgreen.svg)
+
+
 These files were used during the initial stages of development and are still relevant for ongoing processes, such as matching new hotels and categories. While some functionalities have been integrated into the SQL stored procedure, the matching logic remains a crucial part of the workflow for adding new data.
 
 ### `data_io.py`
