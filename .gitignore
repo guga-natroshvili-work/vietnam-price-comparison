@@ -1,0 +1,20 @@
+*.xlsx
+
+# Ignore virtual environments
+venv/
+.venv/
+env/
+.Env/
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+tempCodeRunnerFile.py
+*.zip
